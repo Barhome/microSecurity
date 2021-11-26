@@ -1,8 +1,17 @@
 Docker Threat Modeling
 Given Docker's system components and the STRIDE framework, identify five potential threats that may arise.
 
+1. Repudiation (Docker registry surface): This could happen when malicious images may be committed.
+1. Spoofing (Docker client surface): The trafic between the Docker client and daemon or registry could be spoofed, as the client and daemon communicate using non encrypeted uniz socket. (TLS can be implemented to secure the client)
+2. Information Disclosure (Docker client surface): as the client could expose sesitive information configured insid the Dockerfile such as secrets that are hard coded in configuration files.
+3. Elevation of Priviledge (Docker client surface): as the Dockerfile doesn't specify a user and running with root credential this affects the client authorization leading to abuse level of authorization.
+4. Tampering (Docker host surface): This could affect daemon's configuration as a result of compromised client, and leads to misconfigruration of the Docker host.
+5. 
+
 Kubernetes Threat Modeling
 Given Kubernetes' system components and the STRIDE framework, identify five potential threats that may arise.
+
+1. 
 
 Docker-bench Run Results and Analysis
 From the failed findings, select and document 3 findings from the Docker-bench results that you want to harden based on the 5 attack surface areas you identified in Step 1. At least 1 of the 3 hardened findings should be different from the ones mentioned in the exercise (i.e. 5.10, 5.14, and 5.22).
