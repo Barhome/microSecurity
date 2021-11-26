@@ -58,8 +58,8 @@
 [WARN] 2.5 Ensure insecure registries are not used (Automated)
 [PASS] 2.6 Ensure aufs storage driver is not used (Automated)
 [FAIL] 2.7 Ensure TLS authentication for Docker daemon is configured (Automated)
-	 root        1220       1  0 13:37 ?        00:00:11 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-	 barhome    13105   13103  0 18:19 pts/0    00:00:00 grep dockerd
+	 root       27225       1  0 22:03 ?        00:00:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+	 barhome    29044   29042  0 22:26 pts/0    00:00:00 grep dockerd
 	 grep: /etc/docker/daemon.json: No such file or directory
 	 
 [WARN] 2.8 Ensure the default ulimit is configured appropriately (Manual))
@@ -68,43 +68,43 @@
 	 	panic: reflect: indirection through nil pointer to embedded struct
 	 
 	 goroutine 1 [running]:
-	 text/template.errRecover(0xc0004d72e8)
+	 text/template.errRecover(0xc00052d2e8)
 	 	/usr/local/go/src/text/template/exec.go:169 +0x1c5
-	 panic(0x55ae333eaea0, 0x55ae336e42e8)
+	 panic(0x559a98b04ea0, 0x559a98dfe2e8)
 	 	/usr/local/go/src/runtime/panic.go:965 +0x1b9
-	 reflect.Value.FieldByIndex(0x55ae335822c0, 0xc000334480, 0x99, 0xc000294050, 0x2, 0x2, 0x0, 0x55ae33773188, 0x55ae333b1b00)
+	 reflect.Value.FieldByIndex(0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc000142b50, 0x2, 0x2, 0x0, 0x559a98e8d188, 0x559a98acbb00)
 	 	/usr/local/go/src/reflect/value.go:889 +0x325
-	 text/template.(*state).evalField(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x7ffece9ab28f, 0xf, 0x55ae3375cd40, 0xc0004ec1e0, 0xc00007e490, 0x1, ...)
+	 text/template.(*state).evalField(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x7ffe112942f1, 0xf, 0x559a98e76d40, 0xc0004b2270, 0xc00007ee50, 0x1, ...)
 	 	/usr/local/go/src/text/template/exec.go:616 +0x4ed
-	 text/template.(*state).evalFieldChain(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375cd40, 0xc0004ec1e0, 0xc00007e460, ...)
+	 text/template.(*state).evalFieldChain(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76d40, 0xc0004b2270, 0xc00007ee30, ...)
 	 	/usr/local/go/src/text/template/exec.go:569 +0x225
-	 text/template.(*state).evalFieldNode(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004ec1e0, 0xc00007e490, 0x1, 0x1, 0x55ae33478f40, 0x55ae344f79d0, ...)
+	 text/template.(*state).evalFieldNode(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b2270, 0xc00007ee50, 0x1, 0x1, 0x559a98b92f40, 0x559a99c119d0, ...)
 	 	/usr/local/go/src/text/template/exec.go:533 +0x115
-	 text/template.(*state).evalCommand(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004ec1b0, 0x55ae33478f40, 0x55ae344f79d0, 0x99, 0xd0, 0xc0002de0d0, ...)
+	 text/template.(*state).evalCommand(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b2240, 0x559a98b92f40, 0x559a99c119d0, 0x99, 0xd0, 0xc000262270, ...)
 	 	/usr/local/go/src/text/template/exec.go:461 +0x8f0
-	 text/template.(*state).evalPipeline(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004f2000, 0x55ae3207a7d6, 0xc00041a008, 0xc000334440)
+	 text/template.(*state).evalPipeline(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b8300, 0x559a977947d6, 0xc000340058, 0xc0004de040)
 	 	/usr/local/go/src/text/template/exec.go:435 +0x125
-	 text/template.(*state).walk(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375cb48, 0xc0004ec210)
+	 text/template.(*state).walk(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76b48, 0xc0004b22a0)
 	 	/usr/local/go/src/text/template/exec.go:254 +0x38a
-	 text/template.(*state).walk(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375ce18, 0xc0004ec180)
+	 text/template.(*state).walk(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76e18, 0xc0004b2210)
 	 	/usr/local/go/src/text/template/exec.go:263 +0x13c
-	 text/template.(*Template).execute(0xc000334440, 0x55ae33703838, 0xc0001db740, 0x55ae335822c0, 0xc000334480, 0x0, 0x0)
+	 text/template.(*Template).execute(0xc0004de040, 0x559a98e1d838, 0xc0001d9740, 0x559a98c9c2c0, 0xc0004de080, 0x0, 0x0)
 	 	/usr/local/go/src/text/template/exec.go:217 +0x1c6
 	 text/template.(*Template).Execute(...)
 	 	/usr/local/go/src/text/template/exec.go:200
-	 github.com/docker/cli/cli/command/system.formatInfo(0x55ae3376ff88, 0xc0000b0340, 0x0, 0xc0003eaff0, 0x1, 0x1, 0xc0000a49b0, 0x0, 0x0, 0x0, ...)
+	 github.com/docker/cli/cli/command/system.formatInfo(0x559a98e89f88, 0xc0000b0750, 0x0, 0xc0004572e0, 0x1, 0x1, 0xc0000a45a0, 0x0, 0x0, 0x0, ...)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:511 +0x1fd
-	 github.com/docker/cli/cli/command/system.runInfo(0xc0002f2b00, 0x55ae3376ff88, 0xc0000b0340, 0xc0002c6c10, 0x0, 0x0)
+	 github.com/docker/cli/cli/command/system.runInfo(0xc000308b00, 0x559a98e89f88, 0xc0000b0750, 0xc0002d0c10, 0x0, 0x0)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:88 +0x3a5
-	 github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc0002f2b00, 0xc0001636a0, 0x0, 0x2, 0x0, 0x0)
+	 github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc000308b00, 0xc0001d77c0, 0x0, 0x2, 0x0, 0x0)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:54 +0x48
-	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc0002f2b00, 0xc0002fb4b0, 0x2, 0x2, 0xc0002f2b00, 0xc0002fb4b0)
+	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc000308b00, 0xc000454070, 0x2, 0x2, 0xc000308b00, 0xc000454070)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:850 +0x472
-	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc00011c580, 0xc0002fb4a0, 0x3, 0x3)
+	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc0000e2b00, 0xc000454060, 0x3, 0x3)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:958 +0x375
 	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).Execute(...)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:895
-	 main.runDocker(0xc0000b0340, 0x55ae33705dd8, 0xc000010020)
+	 main.runDocker(0xc0000b0750, 0x559a98e1fdd8, 0xc000010020)
 	 	/go/src/github.com/docker/cli/cmd/docker/docker.go:287 +0x1eb
 	 main.main()
 	 	/go/src/github.com/docker/cli/cmd/docker/docker.go:298 +0xfc
@@ -114,8 +114,8 @@
 [PASS] 2.12 Ensure that authorization for Docker client commands is enabled (Automated)
 [PASS] 2.13 Ensure centralized and remote logging is configured (Automated)
 [FAIL] 2.14 Ensure containers are restricted from acquiring new privileges (Automated)
-	 root        1220       1  0 13:37 ?        00:00:11 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-	 barhome    13161   13159  0 18:19 pts/0    00:00:00 grep dockerd
+	 root       27225       1  0 22:03 ?        00:00:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+	 barhome    29098   29096  0 22:26 pts/0    00:00:00 grep dockerd
 	 grep: /etc/docker/daemon.json: No such file or directory
 	 
 [FAIL] 2.15 Ensure live restore is Enabled (Automated)
@@ -123,51 +123,51 @@
 	 	panic: reflect: indirection through nil pointer to embedded struct
 	 
 	 goroutine 1 [running]:
-	 text/template.errRecover(0xc0004a52e8)
+	 text/template.errRecover(0xc00046d2e8)
 	 	/usr/local/go/src/text/template/exec.go:169 +0x1c5
-	 panic(0x55db36dbcea0, 0x55db370b62e8)
+	 panic(0x55dc67f2aea0, 0x55dc682242e8)
 	 	/usr/local/go/src/runtime/panic.go:965 +0x1b9
-	 reflect.Value.FieldByIndex(0x55db36f542c0, 0xc000334480, 0x99, 0xc000362330, 0x2, 0x2, 0x0, 0x55db37145188, 0x55db36d8f260)
+	 reflect.Value.FieldByIndex(0x55dc680c22c0, 0xc0005a6040, 0x99, 0xc000130330, 0x2, 0x2, 0x0, 0x55dc682b3188, 0x55dc67efd260)
 	 	/usr/local/go/src/reflect/value.go:889 +0x325
-	 text/template.(*state).evalField(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0x7ffd0f5e128c, 0x12, 0x55db3712ed40, 0xc0003c6210, 0xc0001dc050, 0x1, ...)
+	 text/template.(*state).evalField(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0x7ffcea74c2ee, 0x12, 0x55dc6829cd40, 0xc0005a2210, 0xc00007e7c0, 0x1, ...)
 	 	/usr/local/go/src/text/template/exec.go:616 +0x4ed
-	 text/template.(*state).evalFieldChain(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0x55db36f542c0, 0xc000334480, 0x99, 0x55db3712ed40, 0xc0003c6210, 0xc0001dc040, ...)
+	 text/template.(*state).evalFieldChain(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0x55dc6829cd40, 0xc0005a2210, 0xc00007e490, ...)
 	 	/usr/local/go/src/text/template/exec.go:569 +0x225
-	 text/template.(*state).evalFieldNode(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0xc0003c6210, 0xc0001dc050, 0x1, 0x1, 0x55db36e4af40, 0x55db37ec99d0, ...)
+	 text/template.(*state).evalFieldNode(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0xc0005a2210, 0xc00007e7c0, 0x1, 0x1, 0x55dc67fb8f40, 0x55dc690379d0, ...)
 	 	/usr/local/go/src/text/template/exec.go:533 +0x115
-	 text/template.(*state).evalCommand(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0xc0003c61e0, 0x55db36e4af40, 0x55db37ec99d0, 0x99, 0x0, 0x0, ...)
+	 text/template.(*state).evalCommand(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0xc0005a21e0, 0x55dc67fb8f40, 0x55dc690379d0, 0x99, 0x0, 0x0, ...)
 	 	/usr/local/go/src/text/template/exec.go:461 +0x8f0
-	 text/template.(*state).evalPipeline(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0xc000154060, 0x0, 0x0, 0xc000334440)
+	 text/template.(*state).evalPipeline(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0xc0005b60c0, 0x0, 0x0, 0xc0005a6000)
 	 	/usr/local/go/src/text/template/exec.go:435 +0x125
-	 text/template.(*state).walk(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0x55db3712eb48, 0xc0003c6240)
+	 text/template.(*state).walk(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0x55dc6829cb48, 0xc0005a2240)
 	 	/usr/local/go/src/text/template/exec.go:254 +0x38a
-	 text/template.(*state).walk(0xc0004a5258, 0x55db36f542c0, 0xc000334480, 0x99, 0x55db3712ee18, 0xc0003c6180)
+	 text/template.(*state).walk(0xc00046d258, 0x55dc680c22c0, 0xc0005a6040, 0x99, 0x55dc6829ce18, 0xc0005a2180)
 	 	/usr/local/go/src/text/template/exec.go:263 +0x13c
-	 text/template.(*Template).execute(0xc000334440, 0x55db370d5838, 0xc0001db740, 0x55db36f542c0, 0xc000334480, 0x0, 0x0)
+	 text/template.(*Template).execute(0xc0005a6000, 0x55dc68243838, 0xc0001fb740, 0x55dc680c22c0, 0xc0005a6040, 0x0, 0x0)
 	 	/usr/local/go/src/text/template/exec.go:217 +0x1c6
 	 text/template.(*Template).Execute(...)
 	 	/usr/local/go/src/text/template/exec.go:200
-	 github.com/docker/cli/cli/command/system.formatInfo(0x55db37141f88, 0xc0000b0410, 0x0, 0xc0003eeff0, 0x1, 0x1, 0xc00041cb40, 0x0, 0x0, 0x0, ...)
+	 github.com/docker/cli/cli/command/system.formatInfo(0x55dc682aff88, 0xc0000b04e0, 0x0, 0xc000592b20, 0x1, 0x1, 0xc000340be0, 0x0, 0x0, 0x0, ...)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:511 +0x1fd
-	 github.com/docker/cli/cli/command/system.runInfo(0xc0002f0b00, 0x55db37141f88, 0xc0000b0410, 0xc0002c4c10, 0x0, 0x0)
+	 github.com/docker/cli/cli/command/system.runInfo(0xc00033cb00, 0x55dc682aff88, 0xc0000b04e0, 0xc0002ee930, 0x0, 0x0)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:88 +0x3a5
-	 github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc0002f0b00, 0xc0004b56a0, 0x0, 0x2, 0x0, 0x0)
+	 github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc00033cb00, 0xc0003b97c0, 0x0, 0x2, 0x0, 0x0)
 	 	/go/src/github.com/docker/cli/cli/command/system/info.go:54 +0x48
-	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc0002f0b00, 0xc0002f94b0, 0x2, 0x2, 0xc0002f0b00, 0xc0002f94b0)
+	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc00033cb00, 0xc00034f4b0, 0x2, 0x2, 0xc00033cb00, 0xc00034f4b0)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:850 +0x472
-	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc000180580, 0xc0002f94a0, 0x3, 0x3)
+	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc00048c840, 0xc00034f4a0, 0x3, 0x3)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:958 +0x375
 	 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).Execute(...)
 	 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:895
-	 main.runDocker(0xc0000b0410, 0x55db370d7dd8, 0xc000010020)
+	 main.runDocker(0xc0000b04e0, 0x55dc68245dd8, 0xc000010020)
 	 	/go/src/github.com/docker/cli/cmd/docker/docker.go:287 +0x1eb
 	 main.main()
 	 	/go/src/github.com/docker/cli/cmd/docker/docker.go:298 +0xfc
 	 grep: /etc/docker/daemon.json: No such file or directory
 	 
 [FAIL] 2.16 Ensure Userland Proxy is Disabled (Automated)
-	 root        1220       1  0 13:37 ?        00:00:11 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-	 barhome    13199   13197  0 18:19 pts/0    00:00:00 grep dockerd
+	 root       27225       1  0 22:03 ?        00:00:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+	 barhome    29136   29134  0 22:26 pts/0    00:00:00 grep dockerd
 	 grep: /etc/docker/daemon.json: No such file or directory
 	 
 [WARN] 2.17 Ensure that a daemon-wide custom seccomp profile is applied if appropriate (Manual)
@@ -219,9 +219,7 @@
 [WARN] 4.2 Ensure that containers use only trusted base images (Manual)
 [WARN] 4.3 Ensure that unnecessary packages are not installed in the container (Manual)
 [WARN] 4.4 Ensure images are scanned and rebuilt to include security patches (Manual)
-[FAIL] 4.5 Ensure Content trust for Docker is Enabled (Automated)
-	 DOCKER_CONTENT_TRUST=
-	 
+[PASS] 4.5 Ensure Content trust for Docker is Enabled (Automated)
 [WARN] 4.6 Ensure HEALTHCHECK instructions have been added to the container images (Automated)
 [WARN] 4.7 Ensure update instructions are not use alone in the Dockerfile (Manual)
 [WARN] 4.8 Ensure setuid and setgid permissions are removed (Manual)
@@ -400,43 +398,43 @@ dockerd --default-ulimit nproc=1024:2048 --default-ulimit nofile=100:200
 	panic: reflect: indirection through nil pointer to embedded struct
 
 goroutine 1 [running]:
-text/template.errRecover(0xc0004d72e8)
+text/template.errRecover(0xc00052d2e8)
 	/usr/local/go/src/text/template/exec.go:169 +0x1c5
-panic(0x55ae333eaea0, 0x55ae336e42e8)
+panic(0x559a98b04ea0, 0x559a98dfe2e8)
 	/usr/local/go/src/runtime/panic.go:965 +0x1b9
-reflect.Value.FieldByIndex(0x55ae335822c0, 0xc000334480, 0x99, 0xc000294050, 0x2, 0x2, 0x0, 0x55ae33773188, 0x55ae333b1b00)
+reflect.Value.FieldByIndex(0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc000142b50, 0x2, 0x2, 0x0, 0x559a98e8d188, 0x559a98acbb00)
 	/usr/local/go/src/reflect/value.go:889 +0x325
-text/template.(*state).evalField(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x7ffece9ab28f, 0xf, 0x55ae3375cd40, 0xc0004ec1e0, 0xc00007e490, 0x1, ...)
+text/template.(*state).evalField(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x7ffe112942f1, 0xf, 0x559a98e76d40, 0xc0004b2270, 0xc00007ee50, 0x1, ...)
 	/usr/local/go/src/text/template/exec.go:616 +0x4ed
-text/template.(*state).evalFieldChain(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375cd40, 0xc0004ec1e0, 0xc00007e460, ...)
+text/template.(*state).evalFieldChain(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76d40, 0xc0004b2270, 0xc00007ee30, ...)
 	/usr/local/go/src/text/template/exec.go:569 +0x225
-text/template.(*state).evalFieldNode(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004ec1e0, 0xc00007e490, 0x1, 0x1, 0x55ae33478f40, 0x55ae344f79d0, ...)
+text/template.(*state).evalFieldNode(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b2270, 0xc00007ee50, 0x1, 0x1, 0x559a98b92f40, 0x559a99c119d0, ...)
 	/usr/local/go/src/text/template/exec.go:533 +0x115
-text/template.(*state).evalCommand(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004ec1b0, 0x55ae33478f40, 0x55ae344f79d0, 0x99, 0xd0, 0xc0002de0d0, ...)
+text/template.(*state).evalCommand(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b2240, 0x559a98b92f40, 0x559a99c119d0, 0x99, 0xd0, 0xc000262270, ...)
 	/usr/local/go/src/text/template/exec.go:461 +0x8f0
-text/template.(*state).evalPipeline(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0xc0004f2000, 0x55ae3207a7d6, 0xc00041a008, 0xc000334440)
+text/template.(*state).evalPipeline(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0xc0004b8300, 0x559a977947d6, 0xc000340058, 0xc0004de040)
 	/usr/local/go/src/text/template/exec.go:435 +0x125
-text/template.(*state).walk(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375cb48, 0xc0004ec210)
+text/template.(*state).walk(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76b48, 0xc0004b22a0)
 	/usr/local/go/src/text/template/exec.go:254 +0x38a
-text/template.(*state).walk(0xc0004d7258, 0x55ae335822c0, 0xc000334480, 0x99, 0x55ae3375ce18, 0xc0004ec180)
+text/template.(*state).walk(0xc00052d258, 0x559a98c9c2c0, 0xc0004de080, 0x99, 0x559a98e76e18, 0xc0004b2210)
 	/usr/local/go/src/text/template/exec.go:263 +0x13c
-text/template.(*Template).execute(0xc000334440, 0x55ae33703838, 0xc0001db740, 0x55ae335822c0, 0xc000334480, 0x0, 0x0)
+text/template.(*Template).execute(0xc0004de040, 0x559a98e1d838, 0xc0001d9740, 0x559a98c9c2c0, 0xc0004de080, 0x0, 0x0)
 	/usr/local/go/src/text/template/exec.go:217 +0x1c6
 text/template.(*Template).Execute(...)
 	/usr/local/go/src/text/template/exec.go:200
-github.com/docker/cli/cli/command/system.formatInfo(0x55ae3376ff88, 0xc0000b0340, 0x0, 0xc0003eaff0, 0x1, 0x1, 0xc0000a49b0, 0x0, 0x0, 0x0, ...)
+github.com/docker/cli/cli/command/system.formatInfo(0x559a98e89f88, 0xc0000b0750, 0x0, 0xc0004572e0, 0x1, 0x1, 0xc0000a45a0, 0x0, 0x0, 0x0, ...)
 	/go/src/github.com/docker/cli/cli/command/system/info.go:511 +0x1fd
-github.com/docker/cli/cli/command/system.runInfo(0xc0002f2b00, 0x55ae3376ff88, 0xc0000b0340, 0xc0002c6c10, 0x0, 0x0)
+github.com/docker/cli/cli/command/system.runInfo(0xc000308b00, 0x559a98e89f88, 0xc0000b0750, 0xc0002d0c10, 0x0, 0x0)
 	/go/src/github.com/docker/cli/cli/command/system/info.go:88 +0x3a5
-github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc0002f2b00, 0xc0001636a0, 0x0, 0x2, 0x0, 0x0)
+github.com/docker/cli/cli/command/system.NewInfoCommand.func1(0xc000308b00, 0xc0001d77c0, 0x0, 0x2, 0x0, 0x0)
 	/go/src/github.com/docker/cli/cli/command/system/info.go:54 +0x48
-github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc0002f2b00, 0xc0002fb4b0, 0x2, 0x2, 0xc0002f2b00, 0xc0002fb4b0)
+github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).execute(0xc000308b00, 0xc000454070, 0x2, 0x2, 0xc000308b00, 0xc000454070)
 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:850 +0x472
-github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc00011c580, 0xc0002fb4a0, 0x3, 0x3)
+github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0xc0000e2b00, 0xc000454060, 0x3, 0x3)
 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:958 +0x375
 github.com/docker/cli/vendor/github.com/spf13/cobra.(*Command).Execute(...)
 	/go/src/github.com/docker/cli/vendor/github.com/spf13/cobra/command.go:895
-main.runDocker(0xc0000b0340, 0x55ae33705dd8, 0xc000010020)
+main.runDocker(0xc0000b0750, 0x559a98e1fdd8, 0xc000010020)
 	/go/src/github.com/docker/cli/cmd/docker/docker.go:287 +0x1eb
 main.main()
 	/go/src/github.com/docker/cli/cmd/docker/docker.go:298 +0xfc
@@ -533,11 +531,6 @@ software which could contain vectors for attack.
 4.4 Images should be re-built ensuring that the latest version of the base images are used, to
 keep the operating system patch level at an appropriate level. Once the images have been
 re-built, containers should be re-started making use of the updated images.
-
-4.5 To enable content trust in a bash shell, enter the following command:
-export DOCKER_CONTENT_TRUST=1
-Alternatively, you could set this environment variable in your profile file so that content 
-trust in enabled on every login.
 
 4.6 You should follow the Docker documentation and rebuild your container images to include
 the HEALTHCHECK instruction.
@@ -723,7 +716,7 @@ docker container prune
 7.10 Test marked as skip
 
 == Summary ==
-31 checks PASS
-38 checks FAIL
+32 checks PASS
+37 checks FAIL
 37 checks WARN
 10 checks INFO
