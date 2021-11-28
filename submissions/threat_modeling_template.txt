@@ -20,3 +20,12 @@ Docker-bench Run Results and Analysis
 From the failed findings, select and document 3 findings from the Docker-bench results that you want to harden based on the 5 attack surface areas you identified in Step 1. At least 1 of the 3 hardened findings should be different from the ones mentioned in the exercise (i.e. 5.10, 5.14, and 5.22).
 The finding I worked on are 4.5 , 3.17 and 3.20
 
+- Finding 4.5 was chosen to avoid Repudiation as Content trust provides the ability to use digital signatures for data sent to and received
+from remote Docker registries. These signatures allow client-side verification of the
+identity and the publisher of specific image tags and ensures the provenance of container
+images.
+
+- Finding 3.17 was chosen to avoid Tampering as the daemon.json file contains sensitive parameters that could alter the behavior of the docker daemon. Making sure that is owned and group owned by root to avoid modifications. 
+
+- Finding 3.21 was chosen to avoid Elevation of Priviledge when less privledged user could change the /etc/sysconfig/docker file to alter the docker daemon.
+

@@ -1,6 +1,8 @@
 1. Incident commander name: commander name 
-2. Executive Summary of what happened: While monitoring the system on grafana we had a huge spike in falco events 
+2. Executive Summary of what happened: While monitoring the system on grafana we had a huge spike in falco events, by checking the cluster I found two intruding pods named "minergate" and "moneropool".
 3. Summary of what was affected: Checking the cluster two pods were created and running two crypto mining containers by checking the grafana visuals the target was to overload and consume the system cpu resources.
 4. Summmry of the impact: Cluster was controlled by the attacker who were able to create crypto mining pods running on the cluster
 5. Summary of the remediation steps: evicting the intruding pods, check the system cpu resources to make sure everything back to normal
+- I ran `kubectl get pod` to find the overloading pods
+- I ran `kubeclt delete pod` on the cluster with pod names and --force flag and 0 period --grace-period flag.
 6. Summary of lessons learned: an alert system should be implemented and allowing admission controllers to only allowing certain images from being imported and started up on the containers within pods.

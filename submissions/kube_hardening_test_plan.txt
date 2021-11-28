@@ -4,4 +4,4 @@ Write at least 200 words describing a Kubernetes-specific test plan based on wha
     1. we use rancher benchmark assement pdf after getting the findings from kube-bench we need to weight the risk what could really hurt the cluster the most and work on it as a priority.
     2. checking with other team members and testing the changes in non-production environment. 
     3. we can use a canary testing to see how it is gonna work under heavy traffic in a staging cluster to evaluate if the hardened version is acceptable or not.
-    4. finally we deploy the changes to production again with close monitoring for regressions to ensure the stability of the cluster. 
+    4. finally we deploy the changes to production again with close monitoring for regressions to ensure the stability of the cluster.
